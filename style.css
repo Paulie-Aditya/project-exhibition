@@ -15,7 +15,7 @@ body{
     height: 100vh;
 }
 .logo{
-    width: 60px;
+    width: 80px;
     cursor: pointer;
     align-items: flex-center;
 }
@@ -36,13 +36,13 @@ nav{
     cursor: pointer;
 }
 .menu{
-    font-size: 80;
+    font-size: 150;
     height: 3vh;
-    width: 70px;
+    width: 90px;
     background-color: #121212;
     color: white;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 17.5px;
 }
 .menu i {
     color: white;
@@ -67,18 +67,18 @@ nav{
     font-size: 15px;
 }
 .search-select:hover{
-    background-color: #ffffffb3;
+    background-color: #f5f5dc;
 }
 
 .search-input {
     width: 100%;
-    font-size: 1r
+    font-size: 1rem;
 }
 .searchbar{
-    width: 750px; 
+    width: 800px; 
 }
 .nav-search:hover{
-    border: 2px solid #f3ce13;
+    border: 2px solid #f5c518;
 }
 .watchlist{
     font-size: 50;
@@ -102,7 +102,7 @@ nav{
 .english{
     font-size: 50;
     height: 3vh;
-    width: 50px;
+    width: 35px;
     background-color: #121212;
     color: white;
     font-weight: 600;
@@ -114,13 +114,24 @@ nav{
     justify-content: center;
     align-items: center;
     font-size: 1.4rem;
-    background-color: #f3ce13;
+    background-color: #f5c518;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     color: #0f1111;
 }
 
-
-/*
-hello
-*/
+.menu:hover{
+    color: #f5c518;
+}
+.menu i:hover{
+    color:  #f5c518;
+}
+.watchlist:hover{
+    color: #f5c518;
+}
+.sign_in:hover{
+    color: #f5c518;
+}
+.english:hover{
+    color: #f5c518;
+}
