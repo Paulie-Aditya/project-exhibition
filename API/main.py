@@ -15,28 +15,28 @@ short-cut --> 'uvicorn main:app --reload'
 
 # new path operation - represents retrieving social media posts
 
-# @app.get("/input_get")
-# def get_posts():
-#     return {"message":"will return post_input"}
+@app.get("/input_get")
+def get_posts():
+    return {"message":"will return post_input"}
 
-# @app.get("/output_get")
-# def get_posts():
-#     return {"message":"will return post_output"}
+@app.get("/output_get")
+def get_posts():
+    return {"message":"will return post_output"}
 
-# @app.post("/input")
-# def create_post():
-#     return {"message":"user input (movie name)"}
-# @app.post("/output")
-# def create_post():
-#     return {"message":"review"}
+@app.post("/input")
+def create_post():
+    return {"message":"user input (movie name)"}
+@app.post("/output")
+def create_post():
+    return {"message":"review"}
 
-# @app.put("/update")
-# def update_post():
-#     return{}
+@app.put("/update")
+def update_post():
+    return{}
 
 @app.get("/")
-def index():
-    return {'data':'blog list'}
+def index(limit, published):
+    return {'data':f'{limit}  blog from the db'}
 
 #list of all unpublished blogs
 @app.get("/blog/unpublished")
