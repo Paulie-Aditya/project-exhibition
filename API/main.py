@@ -50,7 +50,7 @@ def show(blog_id:int):  #(only integer value is allowed)--> error if not a int
 
 
 
-@app.get("/blog/{blog_id}/comments")
-def comments(blog_id):
-    #fetch comments of blog with id = blog_id
-    return {'data':{'1','2'}}
+# @app.get("/blog/{blog_id}/comments")
+# def comments(blog_id):
+#     #fetch comments of blog with id = blog_id
+#     return {'data':{'1','2'}}
