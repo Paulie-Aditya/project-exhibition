@@ -4,12 +4,15 @@ input = 'Fight Club'
 
 from imdb import Cinemagoer
 
+
 ia = Cinemagoer()
 
 search = ia.search_movie(title=input)
 
-if(len(search)<=0):
-    print ("Not Found")
+
+if(len(search)==0):
+    print("Not Found")
+
 id = "tt"+search[0].movieID
 #print(search[0].data)
 
@@ -23,7 +26,6 @@ page = requests.get(url=url)
 soup = BeautifulSoup(page.content, "html.parser")
 
 results = soup.find_all("div",class_="text show-more__control")
-print(len(results)) # 20-30 Reviews
 
 import sentiment
 
