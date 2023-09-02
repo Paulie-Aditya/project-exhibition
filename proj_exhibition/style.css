@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+    color: #fff;
+      
+}
+.header{
+    width: 100%;
+    height: 100vh;
+}
+.logo{
+    width: 60px;
+    cursor: pointer;
+    align-items: flex-center;
+}
+nav{
+  
+    background-color: #121212;
+    border: 100%;
+    outline: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    color: white;
+    padding: 7px 20px;
+    font-size: 15px;
+    /*border-radius: 4px;
+    /*margin-left: 10px;*/
+    cursor: pointer;
+}
+.menu{
+    font-size: 80;
+    height: 3vh;
+    width: 70px;
+    background-color: #121212;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+.menu i {
+    color: white;
+}
+
+.nav-search {
+    display: flex;
+    justify-content: space-evenly;
+    width: 620px;
+    height: 40px;
+    border-radius: 3px;
+}
+
+.search-select {
+    background-color: #f3f3f3;
+    width: 100px;
+    text-align: center;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+.search-select:hover{
+    background-color: #ffffffb3;
+}
+
+.search-input {
+    width: 100%;
+    font-size: 1rem
+}
+.searchbar{
+    width: 750px; 
+}
+.nav-search:hover{
+    border: 2px solid #f3ce13;
+}
+.watchlist{
+    font-size: 50;
+    height: 3vh;
+    width: 80px;
+    background-color: #121212;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+.sign_in{
+    font-size: 50;
+    height: 3vh;
+    width: 80px;
+    background-color: #121212;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    
+}
+.english{
+    font-size: 50;
+    height: 3vh;
+    width: 50px;
+    background-color: #121212;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+.search-icon {
+    width: 50px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    background-color: #f3ce13;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: #0f1111;
+}
+
+.english i {
+    display: flex;
+}
+
+
+/*
+hello
+*/
