@@ -119,8 +119,6 @@ nav{
     border-bottom-right-radius: 3px;
     color: #0f1111;
 }
-
-<<<<<<< HEAD
 .menu:hover{
     color: #f5c518;
 }
@@ -136,5 +134,17 @@ nav{
 .english:hover{
     color: #f5c518;
 }
-=======
->>>>>>> b325c31b2036b42ce5473522bd3962cd28970842
+
+/* header content */
+.content img{
+    box-sizing: border-box;
+    object-fit: fill;
+    width: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    margin: auto;
+}
+
