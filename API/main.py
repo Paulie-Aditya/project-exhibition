@@ -29,3 +29,7 @@ def create_post():
 @app.post("/output")
 def create_post():
     return {"message":"review"}
+
+@app.put("/update")
+def update_post():
+    return{}
