@@ -1,4 +1,6 @@
+from typing import Optional
 from fastapi import FastAPI
+from pydantic import BaseModel
 
 app = FastAPI()
 
@@ -34,9 +36,15 @@ def create_post():
 def update_post():
     return{}
 
+
+
 @app.get("/")
-def index(limit, published):
-    return {'data':f'{limit}  blog from the db'}
+def index(limit=10, published:bool = True, sort: Optional[str]= None):
+    return published
+    if published:
+        return {'data':f'{limit} published blog from the db'}
+    else:
+        return {'data':f'{limit} blog from the db'}
 
 #list of all unpublished blogs
 @app.get("/blog/unpublished")
@@ -51,6 +59,21 @@ def show(blog_id:int):  #(only integer value is allowed)--> error if not a int
 
 
 @app.get("/blog/{blog_id}/comments")
-def comments(blog_id):
+def comments(blog_id, limit = 10):
     #fetch comments of blog with id = blog_id
+    return limit
     return {'data':{'1','2'}}
+
+
+
+
+#request body
+
+class Blog(BaseModel):
+    title: str
+    body: str
+    published: Optional[bool]
+
+@app.post('/blog')
+def create_blog(request: Blog):
+    return {'data':f'blog is created with title as {request.title}'}
