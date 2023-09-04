@@ -14,7 +14,7 @@ if(len(search)==0):
     print("Not Found")
 
 id = "tt"+search[0].movieID
-#print(search[0].data)
+print(search[0].data)
 
 url = f'https://www.imdb.com/title/{id}/reviews/'
 

@@ -136,23 +136,76 @@ nav{
 }
 
 /* header content */
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+
 .content img{
     
     
-    /*box-sizing: border-box;*/
-    /*object-fit: fill;*/
+    box-sizing: border-box;
+    height: 200px;
     width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
     /*display: flex;(/
     /*align-items: center;*/
     /*justify-content: center;*/
     /*flex-wrap: wrap;*/
     padding: 30px 5px;
+    scroll-behavior: smooth;
+    grid-auto-flow: row;
+    transition: 1s ease;
     /*margin: auto;*/
 }
-.content img:hover{
-    width: 300px;
+  
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+
+    from {
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(100%);
+    }
+
+
+  }
+
+.content:hover .content-slide{
+    animation-play-state: paused;
 }
+.content img:hover{
+    height: 300px;
+    width: 400px;
+}
+.content:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  }
+  
+  .content:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  }
 .content h2{
     padding-top: 20px;
     color: burlywood;
+}
+.content-slide{
+    display: inline-block;
+    animation: 15s slide infinite linear;
+
 }
