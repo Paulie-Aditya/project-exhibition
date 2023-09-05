@@ -197,7 +197,7 @@ nav{
     padding-left: 45%;
     padding-right: 45%;
     color: burlywood;
-    align: left;
+    text-align: left;
 }
 .content-slide{
     display: inline-block;
