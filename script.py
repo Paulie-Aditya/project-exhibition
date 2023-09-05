@@ -1,5 +1,5 @@
 # get input from user, taking sample input for now
-input = 'Fight Club'
+input = 'Game of Thrones'
 
 
 from imdb import Cinemagoer
