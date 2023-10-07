@@ -16,10 +16,26 @@ function submitMovie(){
     .then(data => {
         // Handling Response from Backend
         console.log(data);
+        handle_data(data);
+        //console.log(data);
         
     })
 
     .catch(error => {
         console.error("Error", error);
     })
+}
+
+function handle_data(data) {
+    console.log("handling");
+    //document = "movie.html"
+    //document.getElementById("title").innerHTML = data['title']
+    fetch('/redirect-movie',{
+        method: "GET"
+    })
+    .then(response=>  window.location.replace(response.url))
+    .catch(error => {
+        console.error("Error", error);
+    })
+   
 }

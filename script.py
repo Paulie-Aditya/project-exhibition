@@ -20,9 +20,13 @@ def fetch_movie(input):
 
     id = "tt"+search[0].movieID
     #print(search[0].data)
-
+    data = search[0].data
+    #{'title': 'Fight Club', 'year': 1999, 'kind': 'movie', 'cover url': 'https://m.media-amazon.com/images/M/MV5BODQ0OWJiMzktYjNlYi00MzcwLThlZWMtMzRkYTY4ZDgxNzgxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UX50_CR0,1,50,74_.jpg'}
+    title = data['title']
+    release_year = data['year']
+    poster_url = data['cover url']
     url = f'https://www.imdb.com/title/{id}/reviews/'
-    return url
+    return url, title, release_year, poster_url
 
 
 def html_removal(text):
@@ -42,11 +46,15 @@ def reviews_func(url):
     return reviews
 
 def sentiment_analysis(movie):
-    url = fetch_movie(movie)
-    reviews = reviews_func(url)
     analysis = dict()
+    url, title, release_year, poster_url = fetch_movie(movie)
+    analysis['title'] = title
+    analysis['release_year'] = release_year
+    analysis['poster_url'] = poster_url
+    reviews = reviews_func(url)
+    analysis["reviews"] = dict()
     for review in reviews:
-        analysis[review] = sentiment.calc_score(str(review))
+        analysis['reviews'][review] = sentiment.calc_score(str(review))
     return analysis
 
 #data = sentiment_analysis('Fight Club')

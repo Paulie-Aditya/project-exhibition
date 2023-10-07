@@ -1,6 +1,6 @@
-from flask import Flask, request, jsonify, render_template 
+from flask import Flask, request, jsonify, render_template, redirect
+
 import script
-import codecs
 app = Flask(__name__)
 
 @app.route("/", methods = ['GET'])
@@ -12,7 +12,17 @@ def process():
     data = request.get_json()
     movie = data['movie']
     response = script.sentiment_analysis(movie)
+    redirect("/movie")
     return jsonify(response)
+
+@app.route("/movie", methods = ["GET"])
+def movie():
+    return render_template("movie.html")
+    #return redirect(location= "/movie",Response= render_template("movie.html"))
+
+@app.route("/redirect-movie", methods=["GET"])
+def redirect_movie():
+    return redirect(location="/movie", code= 302)
 
 
 if __name__ == "__main__":
