@@ -14,28 +14,63 @@ function submitMovie(){
 
     .then(response => response.json())
     .then(data => {
+        var s = `
+
+        <table border="2">
+        <thead>
+          <h2 align="center">${data.title} Analysis</h2>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Movie Name</td>
+            <td>${data.title}</td>
+          </tr>
+          <tr>
+            <td>Released date</td>
+            <td>${data.release_year}</td>
+          </tr>
+          <tr>
+            <td>Poster</td>
+            <td>
+              <img src=${data.poster_url} alt=${data.title} />
+            </td>
+          </tr>
+        </tbody>
+      </table>`;
+      document.getElementById("container").innerHTML = s;
+      })
+    /*
+    .then(data => {
         // Handling Response from Backend
         console.log(data);
-        handle_data(data);
+        
+        handle_data(JSON.stringify(data));
         //console.log(data);
         
     })
+    */
 
     .catch(error => {
         console.error("Error", error);
     })
 }
 
-function handle_data(data) {
+/*
+async function handle_data(data) {
     console.log("handling");
-    //document = "movie.html"
-    //document.getElementById("title").innerHTML = data['title']
-    fetch('/redirect-movie',{
+    let movie_data = JSON.parse(data);
+    const container = document.querySelector("container")
+    document.getElementById("img").innerHTML = movie_data.poster_url
+    //container.getElementById("img").innerHTML = 
+    /*fetch('/redirect-movie',{
         method: "GET"
     })
+
     .then(response=>  window.location.replace(response.url))
+    
     .catch(error => {
         console.error("Error", error);
     })
+    
    
-}
+}*/
