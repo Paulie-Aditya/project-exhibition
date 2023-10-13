@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MARS</title>
+        <link rel="icon" href ="/static/images/mars_with_black_bg.jpg"></link>
+        <link rel="stylesheet" href="/static/new.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
+        
+    </head>
+
+    
+    <body>
+        <div class="header">
+            <nav>
+                <img src="/static/images/marslogo2-removebg-preview.png" class="logo" alt="logo">
+                
+                    <div class="menu">
+                        <i class="fa-solid fa-bars"></i>
+                            Menu
+                    </div>
+                    <div class="nav-search">
+                        <select class="search-select">
+                            <option>All</option>
+                        </select>
+                        <input class="searchbar" type="text" placeholder=" Search MARS..." id="movie"> </input>
+                        <div class="search-icon">
+                            <i class="fa-solid fa-magnifying-glass" style="color: black;" onclick="submitMovie()"></i>
+                        </div> 
+                    </div>
+                    
+                    
+                    
+                    <p class="watchlist"><span >Watchlist</span></p>
+                    <p class="sign_in"><span >Sign In</span></p>
+                    <p class="english"><span >English</span></p>
+                    
+                   
+            </nav>
+        
+        <div class="content">
+                <h2><b>TOP MOVIES</b></h2>
+                <div class="content-slide">
+                    <img src="/static/images/jjk.webp"/>
+                    <img src="/static/images/inception.webp"/>
+                    <img src="/static/images/peakyBlinders.jpg"/>
+                    <img src="/static/images/spiritedaway.webp"/>
+                    <img src="/static/images/got.jpeg"/>
+                    <img src="/static/images/dostana.webp"/>
+                    <img src="/static/images/thedarkknight.jpeg"/>
+                </div>
+                <div class="content-slide">
+                    <img src="/static/images/jjk.webp"/>
+                    <img src="/static/images/inception.webp"/>
+                    <img src="/static/images/peakyBlinders.jpg"/>
+                    <img src="/static/images/spiritedaway.webp"/>
+                    <img src="/static/images/got.jpeg"/>
+                    <img src="/static/images/dostana.webp"/>
+                    <img src="/static/images/thedarkknight.jpeg"/>
+                </div>
+        </div>
+
+        <div id="container">
+            
+
+          <table id="table">
+          <tbody>
+            <tr>
+              <td id="movie-name">FIGHT CLUB </td>
+              <td id="col2">
+                <img src="https://m.media-amazon.com/images/M/MV5BODQ0OWJiMzktYjNlYi00MzcwLThlZWMtMzRkYTY4ZDgxNzgxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UX50_CR0,1,50,74_.jpg" alt="Fight Club" />
+              </td>
+            </tr>
+            <tr id="odd">
+              <td id="col1">Movie Name</td>
+              <td id="col2">Fight Club</td>
+            </tr>
+            <tr id="even">
+              <td id="col1">Sentiment</td>
+              <td id="col2" class="sentiment">Positive 92.0%</td>
+            </tr>
+            <tr id="odd">
+              <td id="col1">Released date</td>
+              <td id="col2">15 Oct 1999</td>
+            </tr>
+            <tr id="even">
+              <td id="col1">Genre</td>
+              <td id="col2">Drama</td>
+            </tr>
+            <tr id="odd">
+              <td id="col1">Actors</td>
+              <td id="col2">Brad Pitt, Edward Norton, Meat Loaf</td>
+            </tr>
+            <tr id="even">
+              <td id="col1">Director</td>
+              <td id="col2">David Fincher</td>
+            </tr>
+            <tr id="odd">
+              <td id="col1">Plot</td>
+              <td id="col2">An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more. </td>
+            </tr>
+            <!--<tr id="even">
+              <td id="col1">Poster</td>
+              
+            </tr>-->
+            <tr id="even">
+              <td id="col1">IMDb Rating</td>
+              <td id="col2">8.8</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="footer">
+            footer                    
+        </div>
+            
+        
+    </body>
+    <script src = "/static/index.js"></script>
+</html>
