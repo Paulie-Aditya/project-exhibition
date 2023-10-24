@@ -8,16 +8,17 @@
 body{
     background-color: #000;
     color: #fff;
-      
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    overflow-x: hidden;
+    height: 100vh;
+    
 }
+      
 .header{
     width: 100%;
     height: 100vh;
-}
-.logo{
-    width: 80px;
-    cursor: pointer;
-    align-items: flex-center;
 }
 nav{
   
@@ -34,6 +35,11 @@ nav{
     /*border-radius: 4px;
     /*margin-left: 10px;*/
     cursor: pointer;
+}
+.logo{
+    width: 80px;
+    cursor: pointer;
+    align-items: flex-center;
 }
 .menu{
     font-size: 150;
@@ -55,25 +61,29 @@ nav{
     height: 40px;
     border-radius: 3px;
 }
-
+.select{
+    display: flex;
+    align-self: flex-end;
+}
 .search-select {
     background-color: #f3f3f3;
-    width: 100px;
+    width: 45px;
     text-align: center;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     border: none;
     font-weight: 600;
     font-size: 15px;
+   
 }
 .search-select:hover{
     background-color: #f5f5dc;
 }
 
-.search-input {
+/* .search-input {
     width: 100%;
     font-size: 1rem;
-}
+} */
 .searchbar{
     width: 800px; 
 }
@@ -196,7 +206,7 @@ nav{
     padding-top: 20px;
     padding-left: 45%;
     padding-right: 45%;
-    color: burlywood;
+    color: #f5c518;
 }
 .content-slide{
     display: inline-block;
@@ -245,7 +255,7 @@ nav{
     font-family: "Roboto" "Helvetica" sans-serif;
 }
 #movie-name:hover {
-    color: burlywood;
+    color: #f5c518;
 }
 
 #odd {
@@ -260,4 +270,57 @@ nav{
 }
 .sentiment {
     color: rgb(11, 241, 11);
+}
+
+
+
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 2px solid #333;
+    color: #777;
+    
+
+}
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+
+}
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer .row{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.copyright p{
+    font-size: 14px;
+    
+    margin-left: 40%;
+    display: flex;
+    align-items: center;
+}
+.copyright img{
+    width: 115px;
+    height:98px;
+    cursor: pointer;
+    
+}
+.copyright .col2 {
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
