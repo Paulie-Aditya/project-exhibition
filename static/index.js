@@ -1,6 +1,15 @@
-function submitMovie(){
+function submitMovie(id,name=null){
     console.log("Function called")
-    var movie = document.getElementById("movie").value;
+    if(id == "movie-id"){
+      var movie = name;
+    }
+    if(id == "movie"){
+      var movie = document.getElementById("movie").value;
+      if (!movie){
+        return;
+      }
+    }
+    
     console.log(movie);
 
     // Sending data to backend
@@ -14,28 +23,58 @@ function submitMovie(){
 
     .then(response => response.json())
     .then(data => {
-        // Handling Response from Backend
-        console.log(data);
-        handle_data(data);
-        //console.log(data);
-        
-    })
+      console.log(data)
+      var s = `
+      <h2 id="movie-name" align="center">${data.title}</h2>
+
+
+      <table id="table">
+      <tbody>
+        <tr>
+          <td id="movie-name">${(data.title)} </td>
+          <td id="col2">
+            <img src="${data.poster_url}" alt="${data.title}" />
+          </td>
+        </tr>
+        <tr id="odd">
+          <td id="col1">Movie Name</td>
+          <td id="col2">${data.title}</td>
+        </tr>
+        <tr id="even">
+          <td id="col1">Sentiment</td>
+          <td id="col2" class="sentiment" style="color:${data.color}">${data.sentiment} ${data.percentage}</td>
+        </tr>
+        <tr id="odd">
+          <td id="col1">Released date</td>
+          <td id="col2">${data.release_year}</td>
+        </tr>
+        <tr id="even">
+          <td id="col1">Genre</td>
+          <td id="col2">${data.genre}</td>
+        </tr>
+        <tr id="odd">
+          <td id="col1">Actors</td>
+          <td id="col2">${data.cast}</td>
+        </tr>
+        <tr id="even">
+          <td id="col1">Director</td>
+          <td id="col2">${data.director}</td>
+        </tr>
+        <tr id="odd">
+          <td id="col1">Plot</td>
+          <td id="col2">${data.plot}</td>
+        </tr>
+        <tr id="even">
+          <td id="col1">IMDb Rating</td>
+          <td id="col2">${data.imdbRating} ⭐</td>
+        </tr>
+      </tbody>
+    </table>
+      `;
+      document.getElementById("container").innerHTML = s;
+      })
 
     .catch(error => {
         console.error("Error", error);
     })
-}
-
-function handle_data(data) {
-    console.log("handling");
-    //document = "movie.html"
-    //document.getElementById("title").innerHTML = data['title']
-    fetch('/redirect-movie',{
-        method: "GET"
-    })
-    .then(response=>  window.location.replace(response.url))
-    .catch(error => {
-        console.error("Error", error);
-    })
-   
 }
