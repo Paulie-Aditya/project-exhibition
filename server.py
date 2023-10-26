@@ -15,7 +15,8 @@ def home():
 def process():
     data = request.get_json()
     movie = data['movie']
-    response = script.sentiment_analysis(movie)
+    lang = data['lang']
+    response = script.sentiment_analysis(movie, language=lang)
     #redirect("/movie")
     out_file = open("sample.json", "w") 
     json.dump(response, out_file)
@@ -29,17 +30,10 @@ def login():
 @app.route("/register", methods = ["GET"])
 def register():
     return render_template("register.html")
-'''
 
-@app.route("/movie", methods = ["GET"])
-def movie():
-    return render_template("movie.html")
-    #return redirect(location= "/movie",Response= render_template("movie.html"))
-
-@app.route("/redirect-movie", methods=["GET"])
-def redirect_movie():
-    return redirect(location="/movie", code= 302)
-'''
+@app.route("/hindi", methods = ["GET"])
+def hindi():
+    return render_template("hindi.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

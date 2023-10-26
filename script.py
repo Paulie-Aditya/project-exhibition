@@ -5,6 +5,7 @@ import sentiment
 from imdb import Cinemagoer
 import json
 import urllib
+import translation
 
 
 # get input from user, taking sample input for now
@@ -66,7 +67,7 @@ def reviews_func(url):
         reviews[i] = html_removal(str(reviews[i]))
     return reviews
 
-def sentiment_analysis(movie):
+def sentiment_analysis(movie, language = "English"):
     analysis = dict()
     url, title, poster_url = fetch_movie(movie)
     analysis['title'] = title
@@ -112,6 +113,21 @@ def sentiment_analysis(movie):
 
     colors = {"Positive": "rgb(11, 241, 11)", "Negative": "rgb(247, 0, 0)"}
     analysis['color'] = colors[overall_sentiment]
+
+    # Check for the language
+    # Stuff we're actually using: title, plot, genre, cast, director, sentiment
+    if(language == "English"):
+        return analysis
+    elif(language == "Hindi"):
+        for stuff in ['title','plot','genre','cast','director','sentiment']:
+            if(stuff != 'sentiment'):
+                analysis[stuff] = translation.translate(analysis[stuff])
+            else:
+                if(analysis['sentiment'] == "Positive"):
+                    analysis['sentiment'] = 'उत्तम'
+                elif(analysis['sentiment'] == "Negative"):
+                    analysis['sentiment'] = 'खराब'
+
     return analysis
 
 #data = sentiment_analysis('Fight Club')

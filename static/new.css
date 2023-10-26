@@ -92,16 +92,8 @@ nav{
 .nav-search:hover{
     border: 2px solid #f5c518;
 }
-.watchlist{
-    font-size: 50;
-    height: 3vh;
-    width: 80px;
-    background-color: #121212;
-    color: white;
-    font-weight: 600;
-    font-size: 16px;
-}
-.sign_in{
+
+.sign_in .watchlist .language{
     font-size: 50;
     height: 3vh;
     width: 80px;
@@ -110,15 +102,6 @@ nav{
     font-weight: 600;
     font-size: 16px;
     
-}
-.english{
-    font-size: 50;
-    height: 3vh;
-    width: 35px;
-    background-color: #121212;
-    color: white;
-    font-weight: 600;
-    font-size: 16px;
 }
 .search-icon {
     width: 50px;

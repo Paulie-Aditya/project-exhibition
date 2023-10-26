@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MARS</title>
+        <link rel="icon" href ="/static/images/mars_with_black_bg.jpg"></link>
+        <link rel="stylesheet" href="/static/new.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Poppins&family=Quicksand:wght@300&family=Roboto&display=swap" rel="stylesheet">
+        
+    </head>
+
+    
+    <body>
+        <div class="header">
+            <nav>
+                <img src="/static/images/marslogo2-removebg-preview.png" class="logo" alt="logo">
+                
+                    <div class="menu">
+                        <i class="fa-solid fa-bars"></i>
+                            मेनू
+                    </div>
+                    <div class="nav-search">
+                        <select class="search-select">
+                            <option>सब</option>
+                        </select>
+                        <input class="searchbar" type="text" placeholder=" खोजें MARS..." id="movie"> </input>
+                        <div class="search-icon">
+                            <i class="fa-solid fa-magnifying-glass" style="color: black;" onclick="submitMovie('movie', name=null, language='Hindi')"></i>
+                        </div> 
+                    </div>
+                    
+                    
+                    
+                    <p class="watchlist"><span >वाचलिस्ट</span></p>
+                    <p class="sign_in"><span><a href = "/login" style="color: inherit; text-decoration: none;">लॉग इन</a></span></p>
+
+                    <p id="language" value="English" ><span><a href = "/" style="color: inherit; text-decoration: none;">English</a></span></p>
+                    <p id="language" value = "Hindi"><span><a href = "/hindi"style="color: inherit; text-decoration: none;">हिंदी</a></span></p>
+                    
+                   
+            </nav>
+        
+        <div class="content">
+                <h2><b>टॉप  फिल्में</b></h2>
+                <div class="content-slide">
+                    <img src="/static/images/jjk.webp" onclick="submitMovie(id= 'movie-id', name= 'Jujutsu Kaisen', language= 'Hindi')"/>
+                    <img src="/static/images/inception.webp" onclick="submitMovie(id= 'movie-id', name= 'Inception' , language= 'Hindi')"/>
+                    <img src="/static/images/peakyBlinders.jpg" onclick="submitMovie(id= 'movie-id', name= 'Peaky Blinders' , language= 'Hindi')"/>
+                    <img src="/static/images/spiritedaway.webp" onclick="submitMovie(id= 'movie-id', name= 'Spirited Away', language= 'Hindi' )"/>
+                    <img src="/static/images/got.jpeg" onclick="submitMovie(id= 'movie-id', name= 'Game of Thrones' , language= 'Hindi')"/>
+                    <img src="/static/images/phir_hera_pheri.jpg" onclick="submitMovie(id= 'movie-id', name= 'Phir Hera Pheri', language= 'Hindi' )"/>
+                    <img src="/static/images/thedarkknight.jpeg" onclick="submitMovie(id= 'movie-id', name= 'The Dark Knight' , language= 'Hindi')"/>
+                </div>
+                <div class="content-slide">
+                    <img src="/static/images/jjk.webp" onclick="submitMovie(id= 'movie-id', name= 'Jujutsu Kaisen', language= 'Hindi')"/>
+                    <img src="/static/images/inception.webp" onclick="submitMovie(id= 'movie-id', name= 'Inception' , language= 'Hindi')"/>
+                    <img src="/static/images/peakyBlinders.jpg" onclick="submitMovie(id= 'movie-id', name= 'Peaky Blinders' , language= 'Hindi')"/>
+                    <img src="/static/images/spiritedaway.webp" onclick="submitMovie(id= 'movie-id', name= 'Spirited Away', language= 'Hindi' )"/>
+                    <img src="/static/images/got.jpeg" onclick="submitMovie(id= 'movie-id', name= 'Game of Thrones' , language= 'Hindi')"/>
+                    <img src="/static/images/phir_hera_pheri.jpg" onclick="submitMovie(id= 'movie-id', name= 'Phir Hera Pheri', language= 'Hindi' )"/>
+                    <img src="/static/images/thedarkknight.jpeg" onclick="submitMovie(id= 'movie-id', name= 'The Dark Knight' , language= 'Hindi')"/>
+                </div>
+        </div>
+
+        <div id="container">
+            <h2 id="movie-name" align="center">फाइट क्लब</h2>
+
+          <table id="table">
+          <tbody>
+            <tr>
+              <td id="movie-name">फाइट क्लब</td>
+              <td id="col2">
+                <img src="https://m.media-amazon.com/images/M/MV5BODQ0OWJiMzktYjNlYi00MzcwLThlZWMtMzRkYTY4ZDgxNzgxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UX50_CR0,1,50,74_.jpg" alt="Fight Club" />
+              </td>
+            </tr>
+            <tr id="odd">
+              <td id="col1">फिल्म का नाम</td>
+              <td id="col2">फाइट क्लब</td>
+            </tr>
+            <tr id="even">
+              <td id="col1">भाव</td>
+              <td id="col2" class="sentiment" style="color:rgb(11, 241, 11)">उत्तम 92.0%</td>
+            </tr>
+            <tr id="odd">
+              <td id="col1">विमोचन तिथि</td>
+              <td id="col2">15 Oct 1999</td>
+            </tr>
+            <tr id="even">
+              <td id="col1">शैली</td>
+              <td id="col2">Drama</td>
+            </tr>
+            <tr id="odd">
+              <td id="col1">अभिनेताओं</td>
+              <td id="col2">ब्रैड पिट, एडवर्ड नॉर्टन, मीट लोफ</td>
+            </tr>
+            <tr id="even">
+              <td id="col1">निदेशक</td>
+              <td id="col2">डेविड फिंचर</td>
+            </tr>
+            <tr id="odd">
+              <td id="col1">कहानी</td>
+              <td id="col2">एक अनिद्रा कार्यालय कार्यकर्ता और एक शैतान - देखभाल साबुन निर्माता एक भूमिगत फाइट क्लब बनाते हैं जो बहुत अधिक विकसित होता है। </td>
+            </tr>
+            <!--<tr id="even">
+              <td id="col1">Poster</td>
+              
+            </tr>-->
+            <tr id="even">
+              <td id="col1">IMDb पर रेटिंग</td>
+              <td id="col2">8.8 ⭐</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="footer">
+          
+          <div class="copyright">
+          <div class="col2" align="center">
+          <img src="/static/images/marslogo2-removebg-preview.png" >
+          </div>
+          <div class="col2" align="center">
+          <p>कॉपीराइट © . सर्वाधिकार सुरक्षित।</p>
+          </div>
+        </div>
+    </body>
+    <script src = "/static/index.js"></script>
+</html>
